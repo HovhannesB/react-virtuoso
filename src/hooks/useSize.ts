@@ -22,6 +22,7 @@ export function useSizeWithElRef(callback: (e: HTMLElement) => void, enabled = t
     callbackRef = (elRef: CallbackRefParam) => {
       if (elRef && enabled) {
         observer.observe(elRef)
+        callback(elRef)
         ref.current = elRef
       } else {
         if (ref.current) {
