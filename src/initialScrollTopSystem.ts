@@ -22,9 +22,9 @@ export const initialScrollTopSystem = u.system(
             u.filter((state) => state.items.length > 1)
           ),
           () => {
-            requestAnimationFrame(() => {
-              u.publish(scrollTo, location)
-            })
+            // requestAnimationFrame(() => {
+            u.publish(scrollTo, location)
+            // })
           }
         )
       }

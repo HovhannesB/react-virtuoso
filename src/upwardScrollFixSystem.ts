@@ -144,13 +144,13 @@ export const upwardScrollFixSystem = u.system(
       ),
       (offset) => {
         u.publish(deviation, offset)
-        requestAnimationFrame(() => {
-          u.publish(scrollBy, { top: offset })
-          requestAnimationFrame(() => {
-            u.publish(deviation, 0)
-            u.publish(recalcInProgress, false)
-          })
-        })
+        // requestAnimationFrame(() => {
+        u.publish(scrollBy, { top: offset })
+        // requestAnimationFrame(() => {
+        u.publish(deviation, 0)
+        u.publish(recalcInProgress, false)
+        // })
+        // })
       }
     )
 
